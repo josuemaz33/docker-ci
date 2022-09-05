@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: httpd-service
+spec:
+  selector:
+    app: httpd  
+  ports:  
+    - protocol: TCP
+      port: 8082
+      targetPort: 80
+      nodePort: 30020
+      name: httpd-port
+  type: NodePort

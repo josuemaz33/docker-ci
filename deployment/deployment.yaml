@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: httpdstatic2
+  name: httpd-httpdstatic1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: httpdstatic2
+  template:
+    metadata:
+      labels:
+        app: httpdstatic2
+    spec:
+      containers:
+      - image: jmz33/httpdstatic:latest
+        name: httpd
+        ports: 
+        - containerPort: 8082 
+ 
