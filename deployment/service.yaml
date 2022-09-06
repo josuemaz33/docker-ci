@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: httpd-service
+  name: httpd-httpdstatic1
 spec:
   selector:
-    app: httpd  
+    app: httpdstatic2
   ports:  
     - protocol: TCP
       port: 8082
