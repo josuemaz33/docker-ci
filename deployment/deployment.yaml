@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: jmz33/httpdstatic:latest
+        image: jmz33/docker-ci
         ports:
         - containerPort: 8080
